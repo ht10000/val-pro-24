@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For You</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background: radial-gradient(circle, #ff4d6d, #1a001a);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: 'Georgia', serif;
+  color:white;
+  text-align:center;
+}
+.container{
+  animation: pulse 2s infinite;
+}
+button{
+  margin-top:30px;
+  padding:15px 30px;
+  font-size:18px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+}
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.05);}
+  100%{transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>HEY ARYMAN,</h1>
+  <p>
+   I don’t know the perfect way to say this,  
+    but I know I wanted to say it *my way*.
+    I like you. I respect you.  
+    And I’d really love to know how *you* feel —
+    honestly, without pressure.
+    I won’t rush you.
+  I just wanted you to know what I feel is real.</p>
+  <button onclick="goNext()">I want to answer</button>
+</div>
+
+<audio id="bgm">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function goNext(){
+  const audio=document.getElementById("bgm");
+  audio.play();
+  setTimeout(()=>{window.location.href="answer.html"},1500);
+}
+</script>
+</body>
+</html>
